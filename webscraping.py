@@ -18,6 +18,15 @@ def main():
 =========================================================================
     '''
     print(soup.prettify())
+    URL = "https://www.zillow.com/apartments/chandler-az/lakeside/5XhyVN/"
+    r = requests.get(URL)
+    soup = BeautifulSoup(r.content, 'html5lib')
+    
+    # raw html
+    print(r.content)
+    # prettified (parsed) raw html
+    print(soup.prettify())
+    
     break
 
 if (__name__ == "__main__"):
