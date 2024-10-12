@@ -15,7 +15,25 @@ def main():
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
     # Tk(classname = 'Cost Lower Bound Estimation')
     # mainloop()
-    
+    run = True
+    while run:
+        pos = pygame.mouse.get_pos()
+        for event in pygame.event.get():
+            if (event.type == pygame.QUIT):
+                pygame.display.quit()
+                pygame.quit()
+                run = False
+                break
+            if (event.type == pygame.MOUSEBUTTONDOWN):
+                # clicked.
+                continue
+            if (event.type == pygame.KEYDOWN):
+                if (event.key == pygame.K_RETURN):
+                    continue
+        '''for key, bool in zip(pygame.key.get_pressed()):
+            if (key):
+                #etc etc
+                continue'''
     break
 
 if (__name__ == "__main__"):
